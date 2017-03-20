@@ -1,0 +1,12 @@
+C:\Users\Colbehr\Desktop\DojoAssignments\ios
+C:\Users\Colbehr\Desktop\DojoAssignments\mean
+C:\Users\Colbehr\Desktop\DojoAssignments\netCore
+C:\Users\Colbehr\Desktop\DojoAssignments\python
+C:\Users\Colbehr\Desktop\DojoAssignments\ruby
+C:\Users\Colbehr\Desktop\DojoAssignments\WebFundamentals
+C:\Users\Colbehr\Desktop\DojoAssignments\ios\about.txt
+C:\Users\Colbehr\Desktop\DojoAssignments\mean\about.txt
+C:\Users\Colbehr\Desktop\DojoAssignments\netCore\about.txt
+C:\Users\Colbehr\Desktop\DojoAssignments\python\about.txt
+C:\Users\Colbehr\Desktop\DojoAssignments\WebFundamentals\about.txt
+C:\Users\Colbehr\Desktop\DojoAssignments\WebFundamentals\indentation.html
