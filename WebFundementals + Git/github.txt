@@ -1,0 +1,13 @@
+cd dojo
+git init
+git add .
+git commit -m "Added all assignments thus far"
+git log
+copy NUL readme.md
+git add readme.md
+git status
+git commit -m "added readme.md"
+git remote add origin https://github.com/colbehr/DojoAssignments.git
+git push -u origin master
+git add readme.md
+git commit readme.md -m "Updated text"
