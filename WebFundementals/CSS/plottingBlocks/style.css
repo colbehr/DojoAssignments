@@ -6,29 +6,44 @@
 #wrapper{
  width: 950px;
  background-color: silver;
- margin: 0px auto;
+ margin: 0 auto;
+ display: inline-block;
+ padding-right: 10px;
 }
 #header{
  height: 150px;
  background-color: green;
+ margin: 20px;
+ margin-right: 10px;
 }
 #navigation{
  height: 300px;
  width: 200px;
  background-color: blue;
+ display: inline;
+ padding-left: 200px;
+ padding-bottom: 300px;
+ margin: 20px
 }
 #main_content{
  height: 400px;
  width: 700px;
+  margin: 20px;
+ margin-left: 240px;
  background-color: red;
+margin-top: -20px;
+
 }
 .subcontents{
  height: 200px;
  width: 210px;
  background-color: yellow;
+ display: inline-block;
+ margin: 10px
 }
 #advertisement{
  height: 120px;
  width: 660px;
  background-color: purple;
+ margin:20px;
 }
