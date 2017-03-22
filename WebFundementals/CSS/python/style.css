@@ -1,0 +1,225 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    background: #245176;
+    color: white;
+    font-family: sans-serif;
+}
+header img{
+  width: 450px
+}
+#search{
+  float: right;
+  display: inline-block;
+}
+#search p a {
+  color: #ffd42f;
+}
+#searchBox{
+  background-color: #444444;
+  width: 400px;
+  height: 80px;
+  border-radius: 20px;
+  display: inline-block;
+  text-align: center;
+  vertical-align:middle;
+  -webkit-box-shadow: 2px 4px 2px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 4px 2px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 4px 2px -1px rgba(0, 0, 0, 0.75);
+}
+#searchBox input{
+  margin:15px 5px;
+  height:35px;
+  border: outset  grey 2px;
+}
+nav a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+nav {
+    width: 90%;
+    margin: 0 auto;
+    background: #3e7aad;
+    border-radius: 7px;
+    -webkit-box-shadow: 3px 4px 2px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 4px 2px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 4px 2px -1px rgba(0, 0, 0, 0.75);
+}
+
+nav ul li:nth-child(3) {
+    width: 18%;
+}
+
+
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline-block;
+    width: 12%;
+    text-align: center;
+    margin: 12px;
+}
+#listOfLinks ul {
+    list-style-type: none;
+    font-size: 20px;
+    margin-top: 30px;
+}
+
+#listOfLinks li {
+    margin: 15px
+}
+
+#listOfLinks a {
+    color: white;
+
+}
+
+#listOfLinks ul li a::before {
+    content: "";
+    display: inline-block;
+    background: url("http://www.iconsdb.com/icons/preview/orange/arrow-31-xxl.png") no-repeat;
+    background-size: 10px;
+    width: 20px;
+    height: 13px;
+    -webkit-filter: hue-rotate(10deg) brightness(2);
+    /* Safari */
+    filter: hue-rotate(10deg) brightness(2);
+}
+
+#listOfLinks {
+    width: 30%;
+}
+
+#listOfLinks, #info {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+#info {
+    width: 69%;
+}
+
+#info h3 {
+    color: #ffd42f;
+    font-weight: 100;
+    font-size: 23px;
+    font-style: italic;
+    margin: 10px;
+}
+
+#info h4 {
+    font-weight: 300;
+}
+
+#contentRibbon {
+    width: 100%;
+    color: black;
+    background: white;
+    text-align: center;
+}
+
+#gettingStarted, #applications{
+  display: inline-block;
+  width: 35%;
+  vertical-align: top;
+  text-align: center;
+  margin: 0 auto;
+
+}
+#gettingStarted ul,#applications ul{
+   list-style-type: square;
+}
+#gettingStarted p, #applications p{
+  margin: 10px;
+}
+#gettingStarted h1, #applications h1{
+  font-size: 20px;
+  margin: 0;
+}
+#gettingStarted hr, #applications hr{
+  height: 4px;
+  background-color: #73a7d5;
+  margin: 10px;
+  border: 0;
+}
+ #applications a{
+   color: #81afd9;
+    text-decoration: none;
+}
+#smolLink{
+  font-size: 13px;
+}
+
+#gettingStarted a{
+
+    color: #81afd9;
+    text-decoration: none;
+}
+::-webkit-input-placeholder {
+   text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   text-align: center;
+}
+input:nth-child(2){
+  margin-top: 15px !important;
+  top: 4px;
+  position: relative;
+  height: 42px !important;
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  background: #245176;
+  padding: 10px 20px 10px 20px;
+  border: outset  grey 4px;
+  text-decoration: none;
+}
+footer ul {
+  list-style-type: none;
+}
+footer ul li{
+  display: inline-block;
+  width: 20%;
+
+}
+footer a {
+font-size: 20px;
+  color: #81b3df;
+  text-decoration: none;
+}
+footer p {
+  color: #81b3df;
+  font-size: 10px;
+  padding-bottom: 60px
+}
+footer{
+    margin-top: 50px;
+    text-align: center;
+    background: rgba(36,81,118,1);
+    background: -moz-linear-gradient(top, rgba(36,81,118,1) 0%, rgba(52,116,172,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(36,81,118,1)), color-stop(100%, rgba(52,116,172,1)));
+    background: -webkit-linear-gradient(top, rgba(36,81,118,1) 0%, rgba(52,116,172,1) 100%);
+    background: -o-linear-gradient(top, rgba(36,81,118,1) 0%, rgba(52,116,172,1) 100%);
+    background: -ms-linear-gradient(top, rgba(36,81,118,1) 0%, rgba(52,116,172,1) 100%);
+    background: linear-gradient(to bottom, rgba(36,81,118,1) 0%, rgba(52,116,172,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#245176', endColorstr='#3474ac', GradientType=0 );
+}
