@@ -1,0 +1,106 @@
+body,html{
+  margin: 0px;
+  font-family: sans-serif;
+  max-width:1182px;
+}
+body{
+  background: #134E5E; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #134E5E , #71B280); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #134E5E , #71B280); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+header{
+  background: white;
+  font-family: cursive;
+}
+#aboutMeImg{
+  width: calc(40% - 70px);
+  float: left;
+  border: 5px solid lightgrey;
+  margin:20px;
+}
+header h1{
+    color: black;
+    padding-left:20px;
+}
+
+#about{
+
+  width: calc(60% - 60px);
+  height: 275px;
+  background:white;
+  display:inline-block;
+  margin:20px;
+}
+h1{
+  color:white;
+}
+#about h1{
+margin:0;
+background: #bdc3c7; /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+#about p{
+  margin: 10px
+}
+header{
+  height:60px;
+}
+header h1{
+  margin: 0;
+  float: left;
+}
+header h2{
+  text-align: right;
+    margin: 0;
+  float: right;
+}
+.titleh1{
+  font-size: 20px;
+  padding: 10px;
+  margin:0;
+  background: #bdc3c7; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.portfolioObject p{
+  height: 150px
+}
+.portfolioObject {
+  width: 30%;
+  background-color: white;
+  margin:10px;
+  display: inline-block;
+  height: 620px;
+  vertical-align: top;
+}
+.portfolioObject img{
+  width: 100%;
+}
+.portfolioObject img:nth-child(n+3){
+  width: 50px;
+  margin: 5px;
+}
+
+footer{
+  background-color: white;
+  text-align: center;
+  width: 100%
+}
+footer img{
+
+  width:20px
+}
+.webButtonWrapper{
+    width: 100%;
+    text-align: center;
+}
+.webButton{
+  width: 100%;
+  margin: 0 auto;
+  background-color: Green;
+  border-radius: 5px;
+  color: white;
+  padding: 5px;
+  text-decoration: none;
+}
