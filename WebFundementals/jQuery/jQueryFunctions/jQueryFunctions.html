@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="buttons.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .blink_me {
+            animation: blinker .5s linear;
+            -webkit-animation-iteration-count: 3;
+            /* Safari 4.0 - 8.0 */
+            animation-iteration-count: 3;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        button {
+            display: inline-block;
+            /*margin-left: calc(100% - 300px)!important;*/
+            margin-top: 30px !important;
+            vertical-align: text-bottom;
+        }
+
+        .itemText {
+            display: inline-block;
+            width: calc(100% - 200px)
+        }
+
+        h1 {
+            font-family: 'Playball', cursive;
+            font-size: 50px;
+            margin: 0;
+        }
+
+        h2 {
+            font-family: 'Playball', cursive;
+            font-size: 50px !important;
+        }
+
+        hr {
+            padding: 0;
+            border: none;
+            border-top: medium double #333;
+            color: #333;
+            text-align: center;
+        }
+
+        hr:after {
+            content: "§";
+            display: inline-block;
+            position: relative;
+            top: -0.7em;
+            font-size: 1.5em;
+            padding: 0 0.25em;
+            background: white;
+        }
+
+        .wrapper {
+            width: 80%;
+            margin: 0 auto
+        }
+
+        body::-webkit-scrollbar {
+            width: 0;
+        }
+
+        xmp {
+            width: 500px;
+            word-wrap: break-word;
+            overflow: hidden;
+        }
+    </style>
+    <script>
+      var timestr;
+        $(document).ready(function() {
+            $("#slideUp").hide();
+            $("#slideToggle").hide();
+            $("#fadeOut").hide();
+            $("#click").click(function() {
+                date = new Date()
+                timestr = ('0' + date.getHours()).slice(-2) + ":" + ('0' + date.getMinutes()).slice(-2) + ":" + ('0' + date.getSeconds()).slice(-2)
+                swal(".Click" + " ", "The button was clicked at " + timestr , "info", "Ok")
+                $("#click").data("test", {click :"Button was clicked earlier at " + timestr})
+            });
+            $("#hide").click(function() {
+                swal(".Hide" + " ", "The button was hidden.", "info", "Ok")
+                $(this).hide();
+            });
+            $("#show").click(function() {
+                swal(".Show" + " ", "The button was shown again.", "info", "Ok")
+                $("#hide").show();
+            });
+            $(".toggle").click(function() {
+                swal(".Toggle" + " ", "The button was toggled to show another button.", "info", "Ok")
+                $(".toggle").toggle();
+            });
+            $("#slideDown").click(function() {
+                swal(".SlideDown" + " ", "The '.slideUp' button was shown.", "info", "Ok")
+                $("#slideUp").slideDown("slow", );
+            });
+            $("#slideUp").click(function() {
+                swal(".SlideUp" + " ", "The '.slideUp' button was hidden.", "info", "Ok")
+                $("#slideUp").slideUp("slow", );
+            });
+            $(".slideToggle").click(function() {
+                swal(".SlideToggle" + " ", "The buttons were toggled.", "info", "Ok")
+                $(".slideToggle").slideToggle("slow", );
+            });
+            $("#fadeIn").click(function() {
+                swal(".FadeIn" + " ", "The '.fadeOut' button was shown.", "info", "Ok")
+                $("#fadeOut").fadeIn("slow", );
+            });
+            $("#fadeOut").click(function() {
+                swal(".FadeOut" + " ", "The '.fadeOut' button was hidden.", "info", "Ok")
+                $("#fadeOut").fadeOut("slow", );
+            });
+            $("#addClass").click(function() {
+                swal(".addClass" + " ", "The button had a blink class added to it, then taken away..", "info", "Ok")
+                $("#addClass").addClass("blink_me");;
+
+                setTimeout(function() {
+                    $('#addClass').removeClass("blink_me");
+                }, 1500);
+
+            });
+            $("#before").click(function() {
+                swal(".Before" + " ", "Text was added before the element.", "info", "Ok")
+                $("#before").before("<br /><h3>Some Text</h3><br />");
+            });
+            $("#after").click(function() {
+                swal(".After" + " ", "Text was added after the element.", "info", "Ok")
+                $("#after").after("<br /><h3>Some More Text</h3><br />");
+            });
+            $("#append").click(function() {
+                swal(".Append" + " ", "Text was appended after the element.", "info", "Ok")
+                $("#appendText").append("  Some More Text,");
+            });
+            $("#html").click(function() {
+                swal(".html" + " ", "Text was appended after the element.", "info", "Ok")
+                var html = $(".html").html();
+                $("#htmltext").append("<xmp>" + html + "</xmp>");
+                $("html").html();
+            });
+            $("#attr").click(function() {
+                swal(".After" + " ", "The src was added to the element." , "info", "Ok")
+                var attr = $("#attrImage").attr("src");
+                $("#attrText").append(attr);
+            });
+            $("#val").click(function() {
+                swal(".Val" + " ", "The src was added to the element." , "info", "Ok")
+                var val = $("#valInput").val();
+                $("#valText").html("Input: " + val);
+            });
+            $("#text").click(function() {
+                swal(".Text" + " ", "The text was taken from the .Val output and added to the element." , "info", "Ok")
+                var val = $("#valText").text();
+                $("#textText").text(val);
+            });
+            $("#data").click(function() {
+              if(timestr){
+                swal(".Data" + " ", "The text was taken from the .Click output and added to the element." , "info", "Ok")
+              } else{
+                  swal(".Data" + " ", "Go click on the first button. " , "info", "Ok")
+              }
+                $("#dataText").text($("#click").data("test").click);
+            });
+        });
+    </script>
+    <script src="sweetalert-dev.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert.css">
+    <meta charset="utf-8">
+    <title>Jquery</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="item">
+            <div class="itemText">
+                <h1>.Click</h1>
+                <p>The click event is sent to an element when the mouse pointer is over the element, and the mouse button is pressed and released. Any HTML element can receive this event.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="click">Click</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Hide</h1>
+                <p>Hides the matched elements. The matched elements will be hidden immediately, with no animation. This is roughly equivalent to calling <br /><i>.css( "display", "none" )</i></p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="hide">Hide</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Show</h1>
+                <p>The matched elements will be revealed immediately, with no animation. This is roughly equivalent to calling <i>.css( "display", "block" )</i>, except that the display property is restored to whatever it was initially.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="show">Show</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Toggle</h1>
+                <p>The matched elements will be revealed or hidden immediately, with no animation, by changing the CSS display property. If the element is initially displayed, it will be hidden; if hidden, it will be shown. </p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick toggle">Toggle</button><br />
+            <button class="button button--ujarak button--border-thin button--text-thick toggle" style="display: none">Toggled</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.SlideDown</h1>
+                <p>Display the matched elements with a sliding motion. The method animates the height of the matched elements. This causes lower parts of the page to slide down, making way for the revealed items.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="slideDown">slideDown</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.SlideUp</h1>
+                <p>Hide the matched elements with a sliding motion. The method animates the height of the matched elements. This causes lower parts of the page to slide up, appearing to conceal the items. </p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="slideUp">SlideUp</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.SlideToggle</h1>
+                <p>Hide the matched elements with a sliding motion. The method animates the height of the matched elements. This causes lower parts of the page to slide up, appearing to conceal the items. </p>
+            </div>
+            <div style="display:inline-block">
+                <button class="button button--ujarak button--border-thin button--text-thick slideToggle" id="slideToggle" style="margin:0px  !important">SlideToggle 2</button><br />
+                <button class="button button--ujarak button--border-thin button--text-thick slideToggle" id="slideToggle" style="margin:0px !important">SlideToggle 1</button><br />
+            </div>
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.FadeIn</h1>
+                <p>Display the matched elements by fading them to opaque. The method animates the opacity of the matched elements. </p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="fadeIn">fadeIn</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.FadeOut</h1>
+                <p>Hide the matched elements by fading them to transparent. The method animates the opacity of the matched elements.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="fadeOut">fadeOut</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.AddClass</h1>
+                <p>Adds the specified class(es) to each element in the set of matched elements.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="addClass">addClass</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Before</h1>
+                <p>Insert content, specified by the parameter, before each element in the set of matched elements.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="before">before</button><br />
+            <hr />
+        </div>
+        <div class="item html">
+            <div class="itemText">
+                <h1>.After</h1>
+                <p>Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="after">after</button><br />
+            <hr />
+        </div>
+        <div class="item ">
+            <div class="itemText">
+                <h1>.Append</h1>
+                <p>Insert content, specified by the parameter, to the end of each element in the set of matched elements.</p>
+                <i><p id="appendText">
+                  Text goes here:
+                </p></i>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="append">append</button><br />
+            <hr />
+        </div>
+        <div class="item ">
+            <div class="itemText">
+                <h1>.HTML</h1>
+                <p>Insert content, specified by the parameter, after each element in the set of matched elements.</p>
+
+                <code id="htmltext">
+                </code>
+
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="html">html</button><br />
+            <hr />
+        </div>
+        <div class="item text">
+            <div class="itemText">
+                <h1>.Attr</h1>
+                <p>Get the value of an attribute for the first element in the set of matched elements.</p>
+                <img src='https://s-media-cache-ak0.pinimg.com/736x/92/9d/3d/929d3d9f76f406b5ac6020323d2d32dc.jpg' id='attrImage' width="30px"/>
+                <xmp id="attrText">Src:  </xmp>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="attr">attr</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Val</h1>
+                <p>Get the current value of the first element in the set of matched elements or set the value of every matched element.</p>
+                <input type="text" value="Text" id="valInput"/>
+                <p id="valText">
+Input:
+                </p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="val">val</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Text</h1>
+                <p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+                <p id="textText">
+                  Text:
+                </p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="text">text</button><br />
+            <hr />
+        </div>
+        <div class="item">
+            <div class="itemText">
+                <h1>.Data</h1>
+                <p>Store arbitrary data associated with the matched elements or return the value at the named data store for the first element in the set of matched elements.</p>
+                <p id="dataText">
+                </p>
+            </div>
+            <button class="button button--ujarak button--border-thin button--text-thick" id="data">data</button><br />
+            <hr />
+        </div>
+    </div>
+</body>
+<script>
+</script>
+
+</html>
+
+
+<!--
+.click
+.hide
+.show
+.toggle
+.slideDown
+.slideUp
+.slideToggle
+.fadeIn
+.fadeOut
+.addClass
+.before
+.after
+.append
+.html
+.attr
+.val
+.text
+.data -->
