@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        console.log("this")
+        // $(".back").toggle();
+       $(document).on("click", ".card", function(){
+             console.log("this")
+        $(this).find(".front").toggle();
+         $(this).find(".back").toggle();
+       })
+       $(document).on("click", "button", function(){
+         if($("#fname").val() && $("#lname").val()  && $("#fname").val()  ){
+           var fname = $("#fname").val();
+           var lname = $("#lname").val();
+           var desc = $("#fname").val();
+           $("#fname").val("")
+           $("#lname").val("")
+           $("#desc").val("")
+           $("#rightCol").append("<div class='card'><div class='front'> <h1> " + fname + " " + lname + "</h1>   <h3>Click for Description</h3> </div> <div class='back' style='display:none'>   <h3>" + desc + " </h3>   </div> ")
+         } else{
+           alert("Hey You are missing some boxes")
+         }
+         })
+    });
+
+    </script>
+  </head>
+  <body>
+    <div id="leftCol">
+      <h2>First Name:</h2>
+      <input type="text" id="fname"><br><br>
+      <h2>Last Name:</h2>
+      <input type="text" id="lname"><br><br>
+      <h2>Description:</h2>
+      <textarea name="desc" id="desc"
+       ></textarea><br>
+      <button>Submit</button>
+    </div>
+    <div id="rightCol">
+      <div class="card">
+        <div class="front">
+          <h1> $fname  $lname</h1>
+          <h3>Click for Description</h3>
+        </div>
+        <div class="back" style="display:none">
+          <h3>$desc</h3>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
