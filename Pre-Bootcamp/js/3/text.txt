@@ -1,0 +1,16 @@
+What is the JavaScript Math library? What does is contain?
+A bunch of commonly used math algorithms, for example, square root or absolute value.
+Why aren't all those functions just included in JavaScript Automatically?
+to make javascript smaller by default
+If I call Math.random(), what will it return?
+a float between 0 and 1
+What do the following functions do: Math.floor, Math.ceil, Math.trunc, Math.round?
+floor will round down, ceil will round up, trunc truncates the string removing the decimal, round rounds to the nearest int.
+When do Math.floor and Math.trunc not return the same value?
+negative numbers
+What is the % operator and when is it useful?
+modulo or mod, finds out remainders
+How do I make variables declared outside (right next to) a function visible inside it?
+pass them into the function
+Why should I comment my code? Isn't commenting just a waste of time?
+for other people to read, or for yourself when you read it in the future, it is always helpful to have comments
