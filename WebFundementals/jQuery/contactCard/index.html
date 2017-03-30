@@ -2,15 +2,16 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="buttons.css">
     <meta charset="utf-8">
     <title></title>
     <script type="text/javascript">
     $(document).ready(function() {
-        console.log("this")
         // $(".back").toggle();
        $(document).on("click", ".card", function(){
-             console.log("this")
         $(this).find(".front").toggle();
          $(this).find(".back").toggle();
        })
@@ -22,7 +23,7 @@
            $("#fname").val("")
            $("#lname").val("")
            $("#desc").val("")
-           $("#rightCol").append("<div class='card'><div class='front'> <h1> " + fname + " " + lname + "</h1>   <h3>Click for Description</h3> </div> <div class='back' style='display:none'>   <h3>" + desc + " </h3>   </div> ")
+           $("#rightCol").append("<div class='card'><div class='front'> <h1> " + fname + " <br /> " + lname + "</h1>   <h3><br />Click for Description</h3> </div> <div class='back' style='display:none'>   <h3>" + desc + " </h3>   </div> ")
          } else{
            alert("Hey You are missing some boxes")
          }
@@ -40,16 +41,16 @@
       <h2>Description:</h2>
       <textarea name="desc" id="desc"
        ></textarea><br>
-      <button>Submit</button>
+      <button class="menubutton button button--ujarak button--border-thin button--text-thick">Submit</button>
     </div>
     <div id="rightCol">
       <div class="card">
         <div class="front">
-          <h1> $fname  $lname</h1>
-          <h3>Click for Description</h3>
+          <h1>Use form to create contact cards!</h1>
+          <h3><br />Click for Description</h3>
         </div>
         <div class="back" style="display:none">
-          <h3>$desc</h3>
+          <h3>You can add a First name, Last name and Description.</h3>
         </div>
       </div>
     </div>

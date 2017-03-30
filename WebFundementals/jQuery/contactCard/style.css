@@ -1,13 +1,38 @@
 body{
-
+  font-family: 'Roboto', sans-serif;
+    background: url('white_texture.png');
 }
 
 .card {
-  background: url('http://i.imgur.com/94AlaBk.png');
+  color: #9da2b3;
+  background: url('circles.png');
+  background-size: 20px;
   box-shadow: 0px 4px 6px rgb(24,24,24);
    margin: 10px;
   height: 200px;
-  width: 300px
+  width: 400px;
+  text-align: center;
+  -webkit-touch-callout: none;
+   -webkit-user-select: none;
+   -khtml-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+    user-select: none;
+    text-shadow: -1px -1px 1px #fff, 1px 1px 1px #000;
+}
+.front h3 {
+  position: relative;
+  bottom: -25px;
+}
+.card h3, .card h1{
+  opacity: .3
+}
+.front h3::before {
+  content: "--------------";
+  color: crimson;
+  opacity: 1;
+
+
 }
 #leftCol{
   width: 400px;
@@ -18,4 +43,29 @@ body{
   width: 400px;
   display: inline-block;
   vertical-align: top;
+}
+h2{
+  margin: 0;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 2px #c9c9c9;
+  transition: border 0.3s;
+}
+input[type="text"]:focus,
+input[type="text"].focus {
+  border-bottom: solid 2px #969696;
+}
+
+textarea {
+  outline: none;
+	height: 120px;
+	border: 3px solid #cccccc;
+	padding: 5px;
+	font-family: Tahoma, sans-serif;
+	background-image: url(bg.gif);
+	background-position: bottom right;
+	background-repeat: no-repeat;
 }
