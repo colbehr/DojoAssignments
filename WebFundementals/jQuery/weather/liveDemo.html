@@ -5,12 +5,15 @@
     <title>Weather</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
+    function convert(f){
+      return Math.floor(f * (9/5) - 459.67);
+    }
     $(document).ready(function(){
       $(document).on("click", "button", function(){
         console.log("this");
         url = $("input").val()
         $.get("http://api.openweathermap.org/data/2.5/weather?q=" + url + "&appid=190568a61fdc6cffdf0c88f249e6dfda", function(data){
-          $("body").html("<input type='text' value='" + url + "'/><button>Click</button><br />" + data.name + " <br /> "+ data.weather[0].description + "<br />" + data.main.temp + "k")
+          $("body").html("<input type='text' value='" + url + "'/> <button>Click</button><br />" + data.name + " <br /> "+ data.weather[0].description + "<br />" + convert(data.main.temp) + "f")
           console.log(data);
         })
       })
