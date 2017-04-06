@@ -1,40 +1,51 @@
-class Product(object):
-    def __init__(self, price, itemName, Weight, Brand, Cost, Status):
-        self.price = price
-        self.itemName = itemName
-        self.Weight = Weight
-        self.Brand = Brand
-        self.Cost = Cost  # dupe?
-        self.Status = Status
+class Animal(object):
+    def __init__(self, name):
+        self.name = name
+        self.health = 100
 
-    def displayInfo(self):
-        print self.price
-        print self.itemName
-        print self.Weight
-        print self.Brand
-        print self.Cost
-        print self.Status
+    def walk(self):
+        self.health -= 1
         return self
 
-    def Sell(self):
-        self.Status = "Sold"
+    def run(self):
+        self.health -= 5
         return self
 
-    def AddTax(self, tax):
-        print self.price + tax
-        return self
+    def displayHealth(self):
+        print self.health
 
-    def Return(self, reason):
-        if (reason == "defective"):
-            self.Status = "defective"
-            self.price = 0
-        elif (reason == "like new"):
-            self.Status = "for Sale"
-        elif (reason == "opened"):
-            self.Status = "Discount"
-            self.price = self.price - (self.price / 5)
+
+animal1 = Animal("Name")
+animal1.walk().walk().walk().run().run().displayHealth()
+
+
+class Dog(Animal):
+    def __init__(self, name):
+        super(Dog, self).__init__(name)
+        self.health = 150
+
+    def pet(self):
+        self.health += 5
         return self
 
 
-product = Product(100, "Cheese", 10, "CheeseCO", 100, "for Sale")
-product.AddTax(2).Sell().displayInfo()
+dog1 = Dog("Dog1")
+dog1.walk().walk().walk().run().run().pet().displayHealth()
+
+
+class Dragon(Animal):
+    def __init__(self, name):
+        super(Dragon, self).__init__(name)
+        self.health = 170
+
+    def fly(self):
+        self.health -= 10
+        return self
+    def displayHealth(self):
+        print 'this is a dragon!'
+        print self.health
+
+dragon1 = Dragon("Dragon1")
+dragon1.walk().walk().walk().run().run().fly().fly().displayHealth()
+
+dog1.fly() #Dog doesnt fly

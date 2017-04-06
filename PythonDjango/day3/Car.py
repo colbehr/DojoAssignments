@@ -1,35 +1,36 @@
-class Bike(object):
-    def __init__(self, price, max_speed, miles):
+class Car(object):
+    def __init__(self, price, speed, fuel, mileage):
         self.price = price
-        self.max_speed = max_speed
-        self.miles = miles
+        self.speed = speed
+        self.fuel = fuel
+        self.mileage = mileage
+        if (price > 10000):
+            self.tax = .15
+        else:
+            self.tax = .12
 
-    def displayInfo(self):
+    def displayAll(self):
         print self.price
-        print self.max_speed
-        print self.miles
+        print self.speed
+        print self.fuel
+        print self.mileage
+        print self.tax
 
-    def ride(self):
-        print "Riding"
-        self.miles += 10
-        return self
-
-    def reverse(self):
-        print "reversing"
-        self.miles -= 5
-        return self
-
-bike1 = Bike(100, 50, 0)
-bike1.ride().ride().ride()
-bike1.displayInfo()
-bike2 = Bike(101, 50, 0)
-bike2.ride()
-bike2.ride()
-bike2.reverse()
-bike2.reverse()
-bike2.displayInfo()
-bike3 = Bike(102, 50, 0)
-bike3.reverse()
-bike3.reverse()
-bike3.reverse()
-bike3.displayInfo()
+car1 = Car(2000,35,"full",15)
+print "car1________"
+car1.displayAll()
+car2 = Car(2000,5,"Not Full",105)
+print "car2________"
+car2.displayAll()
+car3 = Car(2000,15,"Kinda",95)
+print "car3________"
+car3.displayAll()
+car1 = Car(2000,25,"full",25)
+print "car4________"
+car1.displayAll()
+car1 = Car(2000,45,"Empty",25)
+print "car5________"
+car1.displayAll()
+car1 = Car(20000000,35,"Empty",15)
+print "car6________"
+car1.displayAll()
