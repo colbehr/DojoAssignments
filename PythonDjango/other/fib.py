@@ -17,7 +17,7 @@ fibFile.write("return \"0\"\n")
 for x in range(0, 10000000):
     b = os.path.getsize("/mnt/e/fib/Fib.js")
     print "File Size: ", b
-    if (b > 400000):
+    if (b > 7000000000):
         print "_______BREAK_______"
         break
     fibFile.write("} else if (x == " + str(x) + ") {\n")

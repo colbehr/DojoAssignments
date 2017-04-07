@@ -19,6 +19,4 @@ def ninjacolor(color):
   else:
     return render_template(('nocolor.html'))
 
-
-
 app.run(debug=True)
