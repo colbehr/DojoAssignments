@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+  <a href="/reset">Click to start</a>
+    <p>Your Gold: {{gold}}</p><br /><br /><br />
+    <p>
+      farm
+    </p>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="farm" />
+        <input type="submit" value="Find Gold!" />
+    </form><br /><br /><br />
+    <p>
+      cave
+    </p>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="Cave" />
+        <input type="submit" value="Find Gold!" />
+    </form><br /><br /><br />
+    <p>
+      house
+    </p>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="House" />
+        <input type="submit" value="Find Gold!" />
+    </form><br /><br /><br />
+    <p>
+      Casino
+    </p>
+    <form action="/process_money" method="post">
+        <input type="hidden" name="building" value="Casino" />
+        <input type="submit" value="Find Gold!" />
+    </form>
+    <textarea cols="80" rows="40">{{text}}</textarea>
+    <a href="/reset">Reset</a>
+</body>
+
+</html>
