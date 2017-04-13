@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+
+<body>
+    <p>Enter a Youtube url:</p>
+    <form class="" action="/" method="post">
+        <input type="hidden" name="cmd" value="ytdl" />
+        <input type="text" name="url" value="" />
+        <input type="submit" />
+    </form>
+    <p>
+        or<br> Enter a Wget url:
+    </p>
+    <form class="" action="/" method="post">
+        <input type="hidden" name="cmd" value="wget" />
+        <input type="text" name="url" value="" />
+        <input type="submit" />
+    </form>
+
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for message in messages %}
+    <p>Sent Command: <span style="color:red">{{message}}</span></p>
+    {% endfor %} {% endif %} {% endwith %}
+</body>
+
+</html>

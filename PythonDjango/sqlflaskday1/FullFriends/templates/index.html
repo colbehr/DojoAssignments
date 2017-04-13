@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title>Friends</title>
+</head>
+<body>
+  <h1>Friends:</h1>
+  <!-- with all the data we can then construct a more structured output -->
+    <!-- {{ all_friends }} -->
+  <!-- {% for friend in all_friends: %}
+     <p>ID: {{ friend['id'] }}</p>
+     <p>First Name: {{ friend['first_name'] }}</p>
+     <p>Last Name: {{ friend['last_name'] }}</p>
+     <p>Occupation: {{ friend['occupation'] }}</p>
+     <hr>
+  {% endfor %} -->
+  <style type="text/css">
+  .tg  {border-collapse:collapse;border-spacing:0;}
+  .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+  .tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+  .tg .tg-yw4l{vertical-align:top}
+  </style>
+  <table class="tg">
+    <tr>
+      <th class="tg-yw4l">Name</th>
+      <th class="tg-yw4l">Age</th>
+      <th class="tg-yw4l">Friends Since</th>
+      <th class="tg-yw4l"></th>
+    </tr>
+    {% for friend in all_friends: %}
+    <tr>
+      <td class="tg-yw4l">{{ friend['Name'] }}</td>
+      <td class="tg-yw4l">{{ friend['age'] }}</td>
+      <td class="tg-yw4l">{{ friend['friends_since'] }}</td>
+      <td class="tg-yw4l">{{ friend['friends_since_year'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+  <h2>Add a Friend</h2>
+  <form action='/friends' method='POST'>
+    <label for="Name">Name:<input type="text" name="Name" id="Name"></label>
+    <br /><label for="age">Age:<input type="number" name="age" id="age"></label>
+    <br /><br /><input type="submit" value="Add">
+  </form>
+</body>
+</html>

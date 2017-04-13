@@ -1,3 +1,6 @@
 .idea/
 Virtualenv/
 call.bat
+other/ffmpeg.exe
+other/ffprobe.exe
+other/youtube-dl.exe
