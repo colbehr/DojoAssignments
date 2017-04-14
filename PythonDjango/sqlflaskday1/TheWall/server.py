@@ -74,9 +74,9 @@ def login():
 @app.route('/wall')
 def wall():
     if(session.has_key('id') and session["id"] != None):
-        query = "SELECT messages.id, messages.message, users.fname, users.lname, DATE_FORMAT(messages.created_at, '%M %D %Y') AS time FROM messages join users on users.id = messages.user_id;"
+        query = "SELECT messages.id, messages.message, users.fname, users.lname, messages.user_id, DATE_FORMAT(messages.created_at, '%M %D %Y') AS time FROM messages join users on users.id = messages.user_id;"
         messages = mysql.query_db(query)
-        query = "SELECT comments.message_id, comments.comment, users.fname, users.lname, DATE_FORMAT(comments.created_at, '%M %D %Y') AS time FROM comments join users on users.id = comments.user_id;"
+        query = "SELECT comments.id, comments.message_id, comments.comment, users.fname, users.lname, comments.user_id, DATE_FORMAT(comments.created_at, '%M %D %Y') AS time FROM comments join users on users.id = comments.user_id;"
         comments = mysql.query_db(query)
         return render_template('wall.html', data=messages, comments = comments, user_fname=session['fname'])
     else:
@@ -107,6 +107,26 @@ def postcomment():
         'comment':comment
     }
     thisid = mysql.query_db(query, data)
+    return redirect('/wall')
+
+@app.route('/deleteMessage/<id>')
+def deleteMessage(id):
+    query = "DELETE from messages where messages.id = :id"
+    data = {
+        'id':id
+    }
+    mysql.query_db(query, data)
+    return redirect('/wall')
+
+
+
+@app.route('/deleteComment/<id>')
+def deleteComment(id):
+    query = "DELETE from comments where comments.id = :id"
+    data = {
+        'id':id
+    }
+    mysql.query_db(query, data)
     return redirect('/wall')
 
 

@@ -6,6 +6,13 @@
             .heading h1, h2{
                 display: inline-block;
             }
+            .comment{
+              color:blue;
+              margin-left: 30px
+            }
+            .message{
+              color: green;
+            }
         </style>
     </head>
 
@@ -22,15 +29,27 @@
     <div class="posts">
 
                 {% for message in data %}
+                  <div class="message">
                     <h2>{{message["fname"]}}&nbsp;{{message["lname"]}}&nbsp;|&nbsp;{{message["time"]}}</h2>
                     <p>{{message["message"]}}</p>
+                  {% if message["user_id"] == session['id'] %}
+                  <a href="/deleteMessage/{{message['id']}}">Delete</a>
+                  {%endif%}
+                  </div>
 
                   {% for comment in comments %}
                     {% if comment["message_id"] == message.id %}
+                    <div class="comment">
                     <h3>{{comment["fname"]}}&nbsp;{{comment["lname"]}}&nbsp;|&nbsp;{{comment["time"]}}</h3>
                     <p>{{comment["comment"]}}</p>
+                      {% if comment["user_id"] == session['id'] %}
+                        <a href="/deleteComment/{{comment['id']}}">Delete</a>
+                      {%endif%}
+                    </div>
                     {%endif%}
                   {%endfor%}
+
+
                     <form class="" action="/postcomment" method="post">
                       <input type="hidden" name="message_id" value="{{message['id']}}">
                       <textarea name="comment">comment</textarea><br />
