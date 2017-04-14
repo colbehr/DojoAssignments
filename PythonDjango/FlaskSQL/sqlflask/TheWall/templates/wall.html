@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Wall</title>
+    <style>
+        .heading h1,
+        h2 {
+            display: inline-block;
+            font-family: sans-serif;
+        }
+
+        .message {
+            background-color: #ccddee;
+            border: solid 2px #aaa;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .comment {
+            background-color: #eee;
+            margin-left: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            margin-right: 40px;
+            border: solid 2px #aaa;
+            padding: 5px;
+        }
+
+        .main {
+            width: 600px;
+            height: 120px;
+            border: 2px solid #bbb;
+            padding: 5px;
+            font-family: Tahoma, sans-serif;
+            background-image: url(bg.gif);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
+
+        .mainForm {
+            margin-left: 0px !important;
+        }
+
+        textarea {
+            width: 400px;
+            height: 100px;
+            border: 2px solid #bbb;
+            padding: 5px;
+            font-family: Tahoma, sans-serif;
+            background-image: url(bg.gif);
+            background-position: bottom right;
+            background-repeat: no-repeat;
+        }
+
+        form {
+            margin-left: 30px
+        }
+
+        h2 {
+            margin: 0;
+            margin-bottom: 10px
+        }
+
+        a {
+            color: grey
+        }
+        h2::before, h3::before{
+          background-image: url("{{ url_for('static', filename='icon.png') }}");
+          background-size: 20px;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          content:"";
+          margin: 0 5px;
+        }
+        p{
+          margin-left: 40px
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="heading">
+        <h1>The Wall</h1><br />
+        <h2>Welcome, {{ user_fname }}</h2><br />
+        <a href="/logout">Log Out</a>
+    </div>
+    <form action="/postmessage" method="post" class="mainForm">
+        <textarea name="message" class="main" placeholder="Write a Message"></textarea><br />
+        <input type="submit" name="submit" value="Submit">
+    </form>
+    <div class="posts">
+
+        {% for message in data %}
+        <div class="message">
+            <h2>{{message["fname"]}}&nbsp;{{message["lname"]}}&nbsp;|&nbsp;{{message["time"]}}</h2>
+            <p>{{message["message"]}}</p>
+            {% if message["user_id"] == session['id'] %}
+            <a href="/deleteMessage/{{message['id']}}">Delete</a> {%endif%} {% for comment in comments %} {% if comment["message_id"] == message.id %}
+            <div class="comment">
+                <h3>{{comment["fname"]}}&nbsp;{{comment["lname"]}}&nbsp;|&nbsp;{{comment["time"]}}</h3>
+                <p>{{comment["comment"]}}</p>
+                {% if comment["user_id"] == session['id'] %}
+                <a href="/deleteComment/{{comment['id']}}">Delete</a> {%endif%}
+            </div>
+            {%endif%} {%endfor%}
+            <form class="" action="/postcomment" method="post">
+                <input type="hidden" name="message_id" value="{{message['id']}}">
+                <textarea name="comment" placeholder="Make a comment"></textarea><br />
+                <input type="submit" value="submit">
+            </form>
+        </div>
+        {%endfor%}
+
+
+    </div>
+
+</body>
+
+</html>
+<div class
