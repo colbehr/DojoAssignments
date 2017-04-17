@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      ol{
+        width: 200px;
+        border: 1px solid black
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      surprise:
+    </p>
+    <ol>
+     {% for key,value in data.items %}
+        <li>
+          {{ value }}
+        </li>
+    {% endfor %}
+  </ol>
+  </body>
+</html>
