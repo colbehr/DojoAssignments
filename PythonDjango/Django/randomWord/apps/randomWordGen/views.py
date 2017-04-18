@@ -12,6 +12,7 @@ def index(request):
     if(not request.session.has_key('count')):
         request.session['count'] = 0
     request.session['count'] = request.session['count'] + 1
+
     data = {
         "count":request.session['count'],
         "word": str(randomword(random.randint(1,10)))
