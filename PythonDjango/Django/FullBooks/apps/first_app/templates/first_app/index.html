@@ -19,10 +19,12 @@
   <th class="tg-yw4l">Category</th>
 </tr>
 <tr>
-  <td class="tg-yw4l"></td>
-  <td class="tg-yw4l"></td>
-  <td class="tg-yw4l"></td>
-  <td class="tg-yw4l"></td>
+  {% for book in books %}
+    <td class="tg-yw4l">{{book.id}}</td>
+    <td class="tg-yw4l">{{book.title}}</td>
+    <td class="tg-yw4l">{{book.author}}</td>
+    <td class="tg-yw4l">{{book.category}}</td>
+  {% endfor %}
 </tr>
 </table>
 <br />
