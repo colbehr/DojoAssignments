@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    table {
+      font-family: sans-serif;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+
+    tr:hover {
+      background-color: #ccc
+    }
+
+    td {
+      padding: 10px;
+    }
+
+    th {
+      padding: 5px 20px;
+      background-color: #aaa;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <a style="float:right" href="{% url 'login:logout' %}">Log Out</a>
+    <p>
+      Welcome Back, {{name}}.
+    </p>
+  </nav>
+  <table>
+    <tr>
+      <th>Destination</th>
+      <th>Leaves</th>
+      <th>Returns</th>
+      <th>Plan</th>
+      <th>Leave Trip?</th>
+    </tr>
+    {% for utrip in userTrip %}
+    <tr>
+      <td><a href="/travel/destination/{{utrip.trip.id}}">{{utrip.trip.dest}}</a></td>
+      <td>{{utrip.trip.dateFrom}}</td>
+      <td>{{utrip.trip.dateTo}}</td>
+      <td>{{utrip.trip.desc}}</td>
+      <td><a href="/travel/leaveTrip/{{utrip.trip.id}}">Leave Trip</a></td>
+      {% empty %}
+      <td>
+        No Trips!
+      </td>
+    </tr>
+    {% endfor %}
+
+
+  </table><br />
+  <table>
+    <tr>
+      <th>Creator</th>
+      <th>Destination</th>
+      <th>Leaves</th>
+      <th>Returns</th>
+      <th>Join trip?</th>
+    </tr>
+
+    {% for trip in trips %}
+    <tr>
+        <td>{{trip.user.name}}</td>
+        <td><a href="/travel/destination/{{trip.id}}">{{trip.dest}}</a></td>
+        <td>{{trip.dateFrom}}</td>
+        <td>{{trip.dateTo}}</td>
+        <td><a href="/travel/joinTrip/{{trip.id}}">Join?</a></td>
+      </tr>
+    {% endfor %}
+
+
+  </table><br />
+  <a href="{% url 'travel:add' %}">Add Travel Plan</a>
+
+</body>
+
+</html>

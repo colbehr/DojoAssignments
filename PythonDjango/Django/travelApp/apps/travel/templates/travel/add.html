@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+    .error{
+      color:red;
+    }
+    body{
+      font-family: sans-serif;
+    }
+  </style>
+  <body>
+    <nav>
+      <div style="float:right">
+      <a href="{% url 'travel:index' %}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="{% url 'login:logout' %}">Log Out</a>
+    </div>
+    </nav>
+    <h1>Add a trip</h1>
+    <form class="" action="{% url 'travel:processTrip' %}" method="post" style="width:250px">
+    <fieldset>
+      {% csrf_token %}
+      <p>
+        Destination:
+      </p>
+      <input type="text" name="dest" value="" placeholder="Las Vegas" required>
+      <p>
+        Description:
+      </p>
+      <input type="text" name="desc" value="" placeholder="A trip to..." required>
+      <p>
+        Travel Date From:
+      </p>
+      <input type="date" name="dateFrom" value="" required>
+      <p>
+        Travel Date to:
+      </p>
+      <input type="date" name="dateTo" value="" required><br /><br />
+      <input type="submit" name="" value="Submit">
+    </fieldset>
+    </form>
+    {% for message in messages %}
+      <p class='error'>{{ message }}</p>
+    {% endfor %}
+  </body>
+</html>
