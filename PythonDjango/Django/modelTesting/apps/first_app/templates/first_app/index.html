@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+fdsa
+<a href="/add">add</a><br /><br />
+{% for user in user %}
+  <td>{{user.name}}</td>
+  <td>{{user.username}}</td>
+  <td>{{user.password}}</td>
+  <br />
+{% endfor %}
+<br />
+{% for trips in trip %}
+  <td>{{trips.dest}}</td>
+  <td>{{trips.desc}}</td>
+  <br />
+{% endfor %}
+{% for trip in userJ %}
+  {{trip.name}} {{trip.username}}
+{% endfor %}
+
+  </body>
+</html>
