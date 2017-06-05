@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ninjaGold" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rB4-Yb-7DX">
+                                <rect key="frame" x="36" y="305" width="47" height="30"/>
+                                <state key="normal" title="Casino"/>
+                                <connections>
+                                    <action selector="addCasino:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t8D-0X-65B"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvg-r9-haW">
+                                <rect key="frame" x="46" y="40" width="283" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99999" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVE-Pi-dDG">
+                                <rect key="frame" x="46" y="66" width="283" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b9R-CW-nkt">
+                                <rect key="frame" x="36" y="245" width="45" height="30"/>
+                                <state key="normal" title="House"/>
+                                <connections>
+                                    <action selector="addHouse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o0V-CZ-cB9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ts-Ml-6v7">
+                                <rect key="frame" x="91" y="250" width="284" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8qD-SF-kyt">
+                                <rect key="frame" x="36" y="185" width="35" height="30"/>
+                                <state key="normal" title="Cave"/>
+                                <connections>
+                                    <action selector="addCave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SAt-bz-1Se"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cRN-59-8LM">
+                                <rect key="frame" x="81" y="191" width="286" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgn-lC-41o">
+                                <rect key="frame" x="36" y="125" width="35" height="30"/>
+                                <state key="normal" title="Farm"/>
+                                <connections>
+                                    <action selector="addFarm:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mY4-eA-ETb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ro-1H-dnK">
+                                <rect key="frame" x="81" y="130" width="278" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhl-Yl-oAS">
+                                <rect key="frame" x="16" y="629" width="39" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="Reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PN6-QW-y57"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JBV-TH-Aog">
+                                <rect key="frame" x="93" y="314" width="274" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BRy-tL-eyX">
+                                <rect key="frame" x="36" y="416" width="303" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="BRy-tL-eyX" secondAttribute="trailing" constant="20" id="1Xq-kl-r3C"/>
+                            <constraint firstItem="cRN-59-8LM" firstAttribute="top" secondItem="7Ro-1H-dnK" secondAttribute="bottom" constant="60" id="53c-m1-JkF"/>
+                            <constraint firstItem="JBV-TH-Aog" firstAttribute="top" secondItem="4ts-Ml-6v7" secondAttribute="bottom" constant="60" id="7Os-CE-teh"/>
+                            <constraint firstItem="b9R-CW-nkt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="AZz-NI-HJI"/>
+                            <constraint firstItem="BRy-tL-eyX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Flj-gg-VL5"/>
+                            <constraint firstItem="4ts-Ml-6v7" firstAttribute="top" secondItem="cRN-59-8LM" secondAttribute="bottom" constant="60" id="Kdf-YJ-qL5"/>
+                            <constraint firstItem="8qD-SF-kyt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="L5y-UF-jSN"/>
+                            <constraint firstItem="b9R-CW-nkt" firstAttribute="top" secondItem="8qD-SF-kyt" secondAttribute="bottom" constant="30" id="MXB-Lk-yL3"/>
+                            <constraint firstItem="qVE-Pi-dDG" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="OU3-ZS-yCS"/>
+                            <constraint firstItem="nhl-Yl-oAS" firstAttribute="top" secondItem="BRy-tL-eyX" secondAttribute="bottom" constant="50" id="OhQ-0Q-5Lx"/>
+                            <constraint firstItem="kgn-lC-41o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="PXo-fd-5V2"/>
+                            <constraint firstItem="7Ro-1H-dnK" firstAttribute="leading" secondItem="kgn-lC-41o" secondAttribute="trailing" constant="10" id="Qv9-0O-qZ9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qVE-Pi-dDG" secondAttribute="trailing" constant="30" id="UAi-NY-EZm"/>
+                            <constraint firstItem="qVE-Pi-dDG" firstAttribute="top" secondItem="Pvg-r9-haW" secondAttribute="bottom" constant="5" id="UN2-oT-7Xs"/>
+                            <constraint firstItem="4ts-Ml-6v7" firstAttribute="leading" secondItem="b9R-CW-nkt" secondAttribute="trailing" constant="10" id="Ugp-0E-fzf"/>
+                            <constraint firstItem="Pvg-r9-haW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Zfb-1i-FMo"/>
+                            <constraint firstItem="kgn-lC-41o" firstAttribute="top" secondItem="qVE-Pi-dDG" secondAttribute="bottom" constant="30" id="aeN-lE-cL8"/>
+                            <constraint firstItem="rB4-Yb-7DX" firstAttribute="top" secondItem="b9R-CW-nkt" secondAttribute="bottom" constant="30" id="eEL-Sj-xgX"/>
+                            <constraint firstItem="cRN-59-8LM" firstAttribute="leading" secondItem="8qD-SF-kyt" secondAttribute="trailing" constant="10" id="koj-Nd-tEg"/>
+                            <constraint firstItem="7Ro-1H-dnK" firstAttribute="top" secondItem="qVE-Pi-dDG" secondAttribute="bottom" constant="35" id="p2H-vF-KE5"/>
+                            <constraint firstItem="8qD-SF-kyt" firstAttribute="top" secondItem="kgn-lC-41o" secondAttribute="bottom" constant="30" id="qI3-bA-d8k"/>
+                            <constraint firstItem="JBV-TH-Aog" firstAttribute="leading" secondItem="rB4-Yb-7DX" secondAttribute="trailing" constant="10" id="u9y-dj-1Th"/>
+                            <constraint firstItem="rB4-Yb-7DX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="umi-H3-hUQ"/>
+                            <constraint firstItem="Pvg-r9-haW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="wws-hy-nCr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pvg-r9-haW" secondAttribute="trailing" constant="30" id="yOd-Cl-zMZ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ScoreLabel" destination="qVE-Pi-dDG" id="ucU-Ym-jVf"/>
+                        <outlet property="actionList" destination="BRy-tL-eyX" id="vJO-kF-lI1"/>
+                        <outlet property="casinoLabel" destination="JBV-TH-Aog" id="Ns7-ab-IbZ"/>
+                        <outlet property="caveLabel" destination="cRN-59-8LM" id="ln0-GZ-dbC"/>
+                        <outlet property="farmLabel" destination="7Ro-1H-dnK" id="ScM-QS-xtz"/>
+                        <outlet property="houseLabel" destination="4ts-Ml-6v7" id="YW4-MB-ei2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+</document>

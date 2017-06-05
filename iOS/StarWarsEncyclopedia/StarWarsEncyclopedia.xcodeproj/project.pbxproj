@@ -1,0 +1,317 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65BBF5FB1ED4946A003E36A2 /* StarWarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65BBF5FA1ED4946A003E36A2 /* StarWarsModel.swift */; };
+		65C463F41ED3767300DC7B51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C463F31ED3767300DC7B51 /* AppDelegate.swift */; };
+		65C463F61ED3767300DC7B51 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C463F51ED3767300DC7B51 /* PeopleViewController.swift */; };
+		65C463F91ED3767300DC7B51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C463F71ED3767300DC7B51 /* Main.storyboard */; };
+		65C463FB1ED3767300DC7B51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C463FA1ED3767300DC7B51 /* Assets.xcassets */; };
+		65C463FE1ED3767300DC7B51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65C463FC1ED3767300DC7B51 /* LaunchScreen.storyboard */; };
+		65C464061ED38A7E00DC7B51 /* MovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C464051ED38A7E00DC7B51 /* MovieViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		65BBF5FA1ED4946A003E36A2 /* StarWarsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StarWarsModel.swift; sourceTree = "<group>"; };
+		65C463F01ED3767300DC7B51 /* StarWarsEncyclopedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarWarsEncyclopedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		65C463F31ED3767300DC7B51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		65C463F51ED3767300DC7B51 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
+		65C463F81ED3767300DC7B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		65C463FA1ED3767300DC7B51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		65C463FD1ED3767300DC7B51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		65C463FF1ED3767300DC7B51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65C464051ED38A7E00DC7B51 /* MovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65C463ED1ED3767300DC7B51 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65C463E71ED3767300DC7B51 = {
+			isa = PBXGroup;
+			children = (
+				65C463F21ED3767300DC7B51 /* StarWarsEncyclopedia */,
+				65C463F11ED3767300DC7B51 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65C463F11ED3767300DC7B51 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65C463F01ED3767300DC7B51 /* StarWarsEncyclopedia.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65C463F21ED3767300DC7B51 /* StarWarsEncyclopedia */ = {
+			isa = PBXGroup;
+			children = (
+				65C463F31ED3767300DC7B51 /* AppDelegate.swift */,
+				65C463F51ED3767300DC7B51 /* PeopleViewController.swift */,
+				65C463F71ED3767300DC7B51 /* Main.storyboard */,
+				65C464051ED38A7E00DC7B51 /* MovieViewController.swift */,
+				65C463FA1ED3767300DC7B51 /* Assets.xcassets */,
+				65C463FC1ED3767300DC7B51 /* LaunchScreen.storyboard */,
+				65C463FF1ED3767300DC7B51 /* Info.plist */,
+				65BBF5FA1ED4946A003E36A2 /* StarWarsModel.swift */,
+			);
+			path = StarWarsEncyclopedia;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65C463EF1ED3767300DC7B51 /* StarWarsEncyclopedia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65C464021ED3767300DC7B51 /* Build configuration list for PBXNativeTarget "StarWarsEncyclopedia" */;
+			buildPhases = (
+				65C463EC1ED3767300DC7B51 /* Sources */,
+				65C463ED1ED3767300DC7B51 /* Frameworks */,
+				65C463EE1ED3767300DC7B51 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarWarsEncyclopedia;
+			productName = StarWarsEncyclopedia;
+			productReference = 65C463F01ED3767300DC7B51 /* StarWarsEncyclopedia.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65C463E81ED3767300DC7B51 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = colbehr;
+				TargetAttributes = {
+					65C463EF1ED3767300DC7B51 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 65C463EB1ED3767300DC7B51 /* Build configuration list for PBXProject "StarWarsEncyclopedia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 65C463E71ED3767300DC7B51;
+			productRefGroup = 65C463F11ED3767300DC7B51 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65C463EF1ED3767300DC7B51 /* StarWarsEncyclopedia */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		65C463EE1ED3767300DC7B51 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C463FE1ED3767300DC7B51 /* LaunchScreen.storyboard in Resources */,
+				65C463FB1ED3767300DC7B51 /* Assets.xcassets in Resources */,
+				65C463F91ED3767300DC7B51 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65C463EC1ED3767300DC7B51 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65C463F61ED3767300DC7B51 /* PeopleViewController.swift in Sources */,
+				65C464061ED38A7E00DC7B51 /* MovieViewController.swift in Sources */,
+				65BBF5FB1ED4946A003E36A2 /* StarWarsModel.swift in Sources */,
+				65C463F41ED3767300DC7B51 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		65C463F71ED3767300DC7B51 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65C463F81ED3767300DC7B51 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		65C463FC1ED3767300DC7B51 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				65C463FD1ED3767300DC7B51 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		65C464001ED3767300DC7B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65C464011ED3767300DC7B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		65C464031ED3767300DC7B51 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StarWarsEncyclopedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colbehr.StarWarsEncyclopedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		65C464041ED3767300DC7B51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StarWarsEncyclopedia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.colbehr.StarWarsEncyclopedia;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65C463EB1ED3767300DC7B51 /* Build configuration list for PBXProject "StarWarsEncyclopedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C464001ED3767300DC7B51 /* Debug */,
+				65C464011ED3767300DC7B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65C464021ED3767300DC7B51 /* Build configuration list for PBXNativeTarget "StarWarsEncyclopedia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65C464031ED3767300DC7B51 /* Debug */,
+				65C464041ED3767300DC7B51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65C463E81ED3767300DC7B51 /* Project object */;
+}

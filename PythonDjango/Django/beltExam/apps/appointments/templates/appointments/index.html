@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .error{
+        color:red;
+      }
+      table {
+        font-family: sans-serif;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2
+      }
+
+      tr:hover {
+        background-color: #ccc
+      }
+
+      td {
+        padding: 10px;
+      }
+
+      th {
+        padding: 5px 20px;
+        background-color: #aaa;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Welcome, {{name}}
+    </h1>
+    <h2><a href="/logout" style="float:right">Log out</a></h2>
+    <p><b>
+      Here are your appointments for today,
+      <script>
+        var today = new Date();
+        document.write((today.getMonth()+1)+'/'+today.getDate()+'/'+today.getFullYear());
+      </script>
+    </b></p>
+    <table>
+  <tr>
+    <th>Tasks</th>
+    <th>Time</th>
+    <th>Status</th>
+    <th>Edit</th>
+  </tr>
+  {% for appt in today %}
+  <tr>
+    <td>{{appt.task}}</td>
+    <td>{{appt.time}}</td>
+    <td>{{appt.status}}</td>
+    <td>
+        {% if appt.status != 'Done'%}
+      <form class="" action="/appointments/{{appt.id}}" method="post">
+        {% csrf_token %}
+        <input type="submit" name="" value="Edit">
+      </form>
+      <form class="" action="/appointments/delete/{{appt.id}}" method="post">
+        {% csrf_token %}
+        <input type="submit" name="" value="Delete">
+      </form>
+    </td>
+        {% endif%}
+    {% empty %}
+    <td>
+      No Appointments!
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<p>
+<b>Other appointments:</b>
+</p>
+<table>
+  <tr>
+    <th>Tasks</th>
+    <th>Date</th>
+    <th>Time</th>
+  </tr>
+  {% for appt in notToday %}
+  <tr>
+    <td>{{appt.task}}</td>
+    <td>{{appt.date}}</td>
+    <td>{{appt.time}}</td>
+    {% empty %}
+    <td>
+      No Appointments!
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+<h2>Add Appointment</h2>
+<form class="" action="add" method="post">
+  {% csrf_token %}
+  <label>Date:</label>
+  <input type="date" name="date" value="" required><br /><br />
+  <label>Time:</label>
+  <input type="time" name="time" value="" required><br /><br />
+  <label>Tasks:</label>
+  <input type="Tasks" name="tasks" value="" required><br /><br />
+  <input type="submit" name="" value="Add">
+</form>
+{% for message in messages %}
+  <p class='error'>{{ message }}</p>
+{% endfor %}
+  </body>
+</html>

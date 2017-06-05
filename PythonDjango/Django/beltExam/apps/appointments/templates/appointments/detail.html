@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+      .error{
+        color:red;
+      }
+      body {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="/appointments/">Dashboard</a> | <a href="/logout">Log out</a>
+    <h2>Edit Appointment</h2>
+    <form class="" action="update/{{task.id}}" method="post">
+      {% csrf_token %}
+      <label>Tasks:</label>
+      <input type="Tasks" name="task" value="{{task.task}}" required><br /><br />
+      <label>Status:</label>
+      <select name="status" required="">
+        {% if task.status == 'Done'%}
+        <option value="Done" selected>Done</option>
+        {%else%}
+        <option value="Done" >Done</option>
+        {% endif%}
+        {% if task.status == 'Pending' %}
+        <option value="Pending" selected>Pending</option>
+        {%else%}
+        <option value="Pending" >Pending</option>
+        {% endif%}
+        {% if task.status == 'Missing'%}
+        <option value="Missing" selected>Missing</option>
+        {%else%}
+        <option value="Missing" >Missing</option>
+        {% endif%}
+      </select><br /><br />
+      <label>Date:</label>
+      <input type="date" name="date" value="{{date}}" required><br /><br />
+      <label>Time:</label>
+      <input type="time" name="time" value="{{time}}" required><br /><br />
+      <input type="submit" name="" value="Update">
+    </form>
+    {% for message in messages %}
+      <p class='error'>{{ message }}</p>
+    {% endfor %}
+  </body>
+</html>

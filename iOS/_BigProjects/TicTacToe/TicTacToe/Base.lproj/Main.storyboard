@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TicTacToe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-Bb-anM">
+                                <rect key="frame" x="16" y="30" width="343" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lst-l5-v5y">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="wb5-hN-Ixm"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PYV-8n-ixO">
+                                <rect key="frame" x="16" y="482" width="343" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Make a move Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RP5-87-gco">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="RP5-87-gco" firstAttribute="top" secondItem="PYV-8n-ixO" secondAttribute="top" id="Bv6-PT-Pek"/>
+                                    <constraint firstAttribute="height" constant="30" id="ef2-fa-tbu"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lzx-eo-YUI">
+                                <rect key="frame" x="16" y="60" width="343" height="347"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4qs-TQ-wlO">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6A-Aa-hHd" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sUX-6M-JdW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hrw-MV-MDn" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="118" y="0.0" width="107" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fdb-7j-s2C"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9hM-cb-OuL" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="235" y="0.0" width="108" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pFB-Iq-bve"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Vx0-M3-LDo">
+                                        <rect key="frame" x="0.0" y="119" width="343" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptV-Sa-01t" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rUW-n3-ysn"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6A-rM-C2t" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="118" y="0.0" width="107" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KLh-az-0ya"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="st7-MB-C22" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="235" y="0.0" width="108" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ic0-8r-vz2"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fcJ-nc-aHK">
+                                        <rect key="frame" x="0.0" y="238" width="343" height="109"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9OM-wY-ZD1" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="108" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MxP-Fo-jYv"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnA-nY-yL3" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="118" y="0.0" width="107" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cfP-3P-xoD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVa-EK-VXN" customClass="tttButton" customModule="TicTacToe" customModuleProvider="target">
+                                                <rect key="frame" x="235" y="0.0" width="108" height="109"/>
+                                                <color key="backgroundColor" red="0.66660702228546143" green="0.66670489311218262" blue="0.66658556461334229" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="59"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="ButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0D-EA-Hc8"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INk-NE-Uvj">
+                                <rect key="frame" x="138" y="587" width="100" height="50"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="JGn-vr-now"/>
+                                    <constraint firstAttribute="width" constant="100" id="dHw-3G-hTi"/>
+                                </constraints>
+                                <state key="normal" title="Reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="reset:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6v9-2d-kep"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PYV-8n-ixO" firstAttribute="top" secondItem="lzx-eo-YUI" secondAttribute="bottom" constant="75" id="1DH-eh-UbF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lzx-eo-YUI" secondAttribute="trailing" id="5US-6F-nJQ"/>
+                            <constraint firstItem="lzx-eo-YUI" firstAttribute="top" secondItem="EhG-Bb-anM" secondAttribute="bottom" id="9aq-2h-Uyy"/>
+                            <constraint firstItem="EhG-Bb-anM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="30" id="Dxh-wj-ubW"/>
+                            <constraint firstItem="PYV-8n-ixO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="GBz-wj-ZwP"/>
+                            <constraint firstItem="PYV-8n-ixO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="cIc-hI-aXE"/>
+                            <constraint firstItem="EhG-Bb-anM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="eH7-Ei-7gl"/>
+                            <constraint firstItem="EhG-Bb-anM" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="eyk-Us-TPW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="INk-NE-Uvj" secondAttribute="bottom" constant="30" id="fZu-cs-nTX"/>
+                            <constraint firstItem="INk-NE-Uvj" firstAttribute="top" secondItem="PYV-8n-ixO" secondAttribute="bottom" constant="75" id="koJ-Zj-zUC"/>
+                            <constraint firstItem="lzx-eo-YUI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="uKA-dd-0GT"/>
+                            <constraint firstItem="INk-NE-Uvj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="v81-gR-jwK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="O6A-Aa-hHd" id="J8r-UG-Xo3"/>
+                        <outlet property="button2" destination="Hrw-MV-MDn" id="HrY-WH-wuj"/>
+                        <outlet property="button3" destination="9hM-cb-OuL" id="bpy-QM-jtK"/>
+                        <outlet property="button4" destination="ptV-Sa-01t" id="el9-QJ-pjv"/>
+                        <outlet property="button5" destination="B6A-rM-C2t" id="NVI-9I-L9n"/>
+                        <outlet property="button6" destination="st7-MB-C22" id="WBr-RE-8bN"/>
+                        <outlet property="button7" destination="9OM-wY-ZD1" id="GUl-sI-XgT"/>
+                        <outlet property="button8" destination="OnA-nY-yL3" id="Dj4-Se-H5Q"/>
+                        <outlet property="button9" destination="vVa-EK-VXN" id="QWV-wO-HoD"/>
+                        <outlet property="resetButton" destination="INk-NE-Uvj" id="fTm-l6-i3k"/>
+                        <outlet property="winnerLabel" destination="RP5-87-gco" id="XKz-5R-VEy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.5" y="36.5"/>
+        </scene>
+    </scenes>
+</document>
