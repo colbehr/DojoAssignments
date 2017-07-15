@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h3>Here are quotes</h3>
+<hr />
+    <% for(var i = quotes.length-1; i >= 0; i--) { %>
+      <h3>&nbsp;&nbsp; <%= quotes[i].comment %></h3>
+      <p><i><%= quotes[i].name %> </i><%= quotes[i].date  %></p> <h6><%= quotes[i]._id  %></h6>
+      <hr />
+    <% }%>
+  </body>
+</html>

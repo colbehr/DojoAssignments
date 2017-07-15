@@ -1,0 +1,26 @@
+<p>Comp</p>
+<table>
+  <tbody>
+    <tr>
+      <td>Email;</td>
+      <td>Importance;</td>
+      <td>Subject;</td>
+      <td>Content;</td>
+    </tr>
+    <tr *ngFor="let email of emailList">
+
+      <td *ngIf ='email.importance===true'>{{email.email | lowercase}}</td>
+      <td *ngIf ='email.importance===true'>High</td>
+      <td *ngIf ='email.importance===true'>{{email.subject}}</td>
+      <td *ngIf ='email.importance===true'>{{email.content}}</td>
+    </tr>
+    <tr *ngFor="let email of emailList">
+
+      <td *ngIf ='email.importance===false'>{{email.email | lowercase}}</td>
+      <td *ngIf ='email.importance===false'>Low</td>
+      <td *ngIf ='email.importance===false'>{{email.subject}}</td>
+      <td *ngIf ='email.importance===false'>{{email.content}}</td>
+    </tr>
+  </tbody>
+</table>
+<!-- DivTable.com -->

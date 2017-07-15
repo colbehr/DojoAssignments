@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+    #otherbutton {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+    button{
+      width: 100px;
+      margin:10px;
+    }
+    body{
+      width: 50px;
+      margin: 0 auto;
+      margin-top: 25%
+    }
+    </style>
+    <script type="text/javascript">
+      var prevcolor = ""
+      function clickChange(elem){
+        if(elem.style.color == "blue"){
+          elem.style.color = "red"
+        } else{
+          elem.style.color = "blue"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="document.getElementById('otherbutton').click()">click other button</button>
+    <button id="otherbutton" onclick="clickChange(this)" onmouseover=" prevcolor = this.style.color; this.style.color = 'green';" onmouseout="this.style.color = prevcolor">Button</button>
+  </body>
+</html>

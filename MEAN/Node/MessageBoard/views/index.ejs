@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <style media="screen">
+      .message{
+        background: lightgrey
+      }
+      body{
+           font-family: sans-serif;
+           margin: 0;
+           padding: 0;
+      }
+
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <h3>Here are messages</h3>
+<hr />
+  <form class="" action="/postMessage" method="post">
+    <label for="">Name:</label><br />
+    <input type="text" name="name"><br />
+    <label for="">Message:</label><br />
+    <textarea name="message" rows="3" cols="20"></textarea><br />
+    <input type="submit" name="" value="Submit">
+  </form>
+    <div style="color:red;">
+        <% if(typeof(errors) != 'undefined' ) { %>
+            <% for (var x in errors) { %>
+                <h3><%= errors[x].message %></h3>
+            <% } %>
+        <% } %>
+    </div>
+    <% for(var i = messages.length-1; i >= 0; i--) { %>
+      <div class="message">
+        <h3><%= messages[i].message %></h3>
+        <p>&nbsp;&nbsp;<i><%= messages[i].name %></p>
+        <hr />
+      </div>
+      <% for(var j = messages[i]._comments.length-1; j >= 0; j--) { %>
+        <div class="comment">
+          <h4>Text: <%= messages[i]._comments[j].commentText %><%=  messages[i]._comments[j].text %> </h4>
+          <h5>&nbsp;&nbsp;<i>Name: <%= messages[i]._comments[j].name %> </i></h5>
+          <h6 style="margin:0"><i>id: <%= messages[i]._comments[j]._id%></i></h6>
+          <hr />
+        </div>
+      <% }%>
+      <form class="" action="/postComment" method="post">
+        <input type="hidden" name="id" value="<%= messages[i]._id  %>">
+        <label for="">Name:</label><br />
+        <input type="text" name="name"><br />
+        <label for="">Comment:</label><br />
+        <textarea name="comment" rows="3" cols="20"></textarea><br />
+        <input type="submit" name="" value="Submit">
+      </form>
+    <% }%>
+  </body>
+</html>

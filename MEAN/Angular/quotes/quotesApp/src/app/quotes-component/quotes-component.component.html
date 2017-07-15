@@ -1,0 +1,11 @@
+<form class="" (submit)=makeNewQuote() >
+    <fieldset>
+        <legend>Quote</legend>
+        <p>Add a quote:</p>
+        <textarea name="quote" rows="8" cols="80" [(ngModel)]="newQuote.quoteText"
+        #quoteText="ngModel"></textarea>
+        <p>Name: <input type="text" name="name" value=""  [(ngModel)]="newQuote.author"
+        #author="ngModel"></p>
+        <input type="submit" name="" value="Submit">
+    </fieldset>
+</form>

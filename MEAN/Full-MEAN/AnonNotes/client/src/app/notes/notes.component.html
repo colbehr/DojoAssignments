@@ -1,0 +1,16 @@
+<div class="wrapper">
+
+  <h2>Anonymous Notes</h2>
+  <form class="" (submit)="submitform()">
+    <p>Note: <input type="text" name="note" [(ngModel)]="note" value=""> </p>
+    <input type="submit" name="" value="Add Note">
+  </form>
+  <div class="allNotes">
+
+    <div class="note" *ngFor="let note of allNotes | reverse">
+        <p class="noteDate">{{note.created_at | date:'medium'}}</p>
+      <p class="noteText">{{note.note}}</p>
+    </div>
+
+  </div>
+</div>

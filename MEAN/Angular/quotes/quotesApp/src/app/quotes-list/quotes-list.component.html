@@ -1,0 +1,13 @@
+
+<div class="quoteBox" *ngFor="let quote of quotesList">
+    <div class="" style="width:100%">
+        <p>{{quote.quoteText}}</p>
+        <p>-{{quote.author}}</p>
+    </div>
+    <h1>{{quote.votes}}</h1>
+    <div class="right" style="min-width:86px">
+        <p (click)="vote(quote.id, 1)">Vote up</p><br />
+        <p (click)="vote(quote.id, -1)" style="margin-top: -17px !important; margin-bottom: -17px !important;">Vote down</p><br />
+        <p (click)="delete(quote.id)">Delete</p><br />
+    </div>
+</div>
